@@ -22,7 +22,7 @@ class Contact extends Component {
         console.log('Current State is: ' + JSON.stringify(values));
         alert('Current State is: ' + JSON.stringify(values));
     }
-
+        
     render(){
         return(
             <div className="container">
