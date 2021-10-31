@@ -21,16 +21,16 @@ function RenderComment({comments}) {
         return (
             <div key={comment.id}>
                 <p>{comment.comment}</p>
-                <p>-- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
+                <p>-- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>   
             </div>
         )
     })
     return (
-      <div>
-        <h4>Comments</h4>
-        {Comments}
-      </div>
-    );
+        <div>
+          <h4>Comments</h4>
+          {Comments}
+        </div>
+      );    
 }
 
 const DishDetail = (props) => {
@@ -54,11 +54,12 @@ const DishDetail = (props) => {
                     </div>
                     <div className="col-12 col-md-5 m-1">
                         <div>
-                            <RenderComment comments={props.comments} />
+                            <RenderComment comments={props.comments} 
+                            />
                             <Button outline onClick={() => setModalOpen(!isModalOpen)} className="bg-light">
                                 <span className="fa fa-sign-in fa-lg"></span> Submit comment
                             </Button>
-                            <CommentForm isModalOpen={isModalOpen} setModalOpen={setModalOpen} />
+                            <CommentForm isModalOpen={isModalOpen} setModalOpen={setModalOpen} dishId={props.dish.id} addComment={props.addComment}  />
                         </div>
                     </div>
                 </div>

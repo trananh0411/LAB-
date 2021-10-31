@@ -1,0 +1,11 @@
+import * as AtionTypes from './ActionType';
+
+export const addComment = (dishId, rating, author, comment) => ({
+    type: AtionTypes.ADD_COMMENT,
+    payload: {
+        dishId: dishId,
+        rating: rating,
+        author: author,
+        comment: comment
+    }
+});
