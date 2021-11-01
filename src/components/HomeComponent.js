@@ -6,12 +6,12 @@ import { baseUrl } from '../redux/baseUrl';
 function RenderCard({item, isLoading, errMess}) {
     if (isLoading) {
         return(
-                <Loading />
+            <Loading />
         );
     }
     else if (errMess) {
         return(
-                <h4>{errMess}</h4>
+            <h4>{errMess}</h4>
         );
     }
     else 
