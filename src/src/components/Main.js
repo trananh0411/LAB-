@@ -16,7 +16,7 @@ const mapDispatchToProps = dispatch => ({
   addComment: (dishId, rating, author, comment) => dispatch(addComment(dishId, rating, author, comment)),
   fetchDishes: () => { dispatch(fetchDishes())},
   resetFeedbackForm: () => { dispatch(actions.reset('feedback'))},
-  fetchComments: () => dispatch(fetchComments()), 
+  fetchComments: () => dispatch(fetchComments()),
   fetchPromos: () => dispatch(fetchPromos())
 });
 

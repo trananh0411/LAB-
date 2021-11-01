@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, CardBody, CardImg, CardTitle, CardText, Breadcrumb, BreadcrumbItem, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import CommentForm from './CommentFormComponent';
+import CommentForm from './CommentForm';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../redux/baseUrl';
 
