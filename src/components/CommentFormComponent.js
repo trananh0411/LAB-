@@ -14,10 +14,10 @@ class CommentForm extends Component{
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleSubmit(values){
+  handleSubmit(values){ 
     console.log(values);
     alert(JSON.stringify(values));
-    this.props.addComment(this.props.dishId, values.rating, values.name, values.comment);
+    this.props.postComment(this.props.dishId, values.rating, values.name, values.comment);
   }
 
     render(){
@@ -109,4 +109,4 @@ class CommentForm extends Component{
     }
 }
 
-export default CommentForm;
+export default CommentForm; 
